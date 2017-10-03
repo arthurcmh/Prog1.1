@@ -1,6 +1,6 @@
 /*
 Autor: David Gagliano Florencio
-Programa para calcular frequências e temporizações de uma memória ram ddr3 e ddr4.
+Programa para calcular frequÃªncias e temporizaÃ§Ãµes de uma memÃ³ria ram ddr3 e ddr4.
 */
 #include <stdio.h>
 #include <math.h>
@@ -9,7 +9,7 @@ int main ()
 {
     float tcl, trcd, trp, tras;
     float freq,lb, cl,clre, ciclo, rcd, rp, ras;
-    int opcao,ddr;
+    int opcao;
     float nfreq,nlb,nciclo,ncl,nrcd,nrp,nras,aum;
     
     do
@@ -32,7 +32,7 @@ int main ()
        printf("Insira a temporizacao tRAS:\t");
        scanf("%f", &ras);
                         
-            printf("\n"); //espaço
+            printf("\n"); //espaÃ§o
                       
     lb = (freq  * 8);
     
@@ -46,7 +46,7 @@ int main ()
     
     printf("Cada ciclo dura: %.3f ns\n", ciclo);
     
-    printf("\n"); //espaço
+    printf("\n"); //espaÃ§o
     
     tcl = (ciclo * cl);
     printf("A temporizacao CL demora %.2f ns...\n", tcl);
@@ -65,12 +65,12 @@ int main ()
 	
     printf("DDR3 Tensao recomendada 1.5 ~ 1.65\nDDR4 Tensao recomendada 1.2 ~ 1.35 [1.35 ~ 1.45 Quente! Risco de encurtar vida util.] \n{DDR4 - 1.5V = Absolute max voltage allowed for Intel XMP}");
 
-    printf("\n--------------------------------------------------------\n"); // Espaço para overclock
+    printf("\n--------------------------------------------------------\n"); // EspaÃ§o para overclock
     
     printf("[OC - Overclock] Entre com a nova frequencia pretendida:\n");
     scanf("%f", &nfreq);
     
-    printf("\n"); //Espaço
+    printf("\n"); //EspaÃ§o
     
     nlb = (nfreq * 8);
     aum = (nlb - lb);
@@ -82,7 +82,7 @@ int main ()
     ciclo = ((1/clre)*1000);
     printf("Cada ciclo dura: %.3f ns\n", ciclo);
     
-    printf("\n"); // Espaço
+    printf("\n"); // EspaÃ§o
     
     ncl = (tcl/ciclo);
     printf("Novo CL tera que ser:   |%.0f| \n", ncl);
@@ -98,13 +98,12 @@ int main ()
     
     printf("Talvez seja necessario alterar o CMD - Command Rate T1 -> T2\n");
     
-    //Parei aqui - Falta dar a conclusão ou mais opções.
-    //Opção de repetir logo abaixo!
+    //OpÃ§Ã£o de repetir logo abaixo!
     
     printf("\nEntre com o numero (1) para repetir...\n");
     scanf("%d", &opcao);
 }
-while (opcao == 1); // Opção de voltar ao começo. Caso erre.
+while (opcao == 1); // OpÃ§Ã£o de voltar ao comeÃ§o. Caso erre.
 
     
     
