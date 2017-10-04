@@ -27,12 +27,12 @@ printf("A Area e: %d \n", area);
 
 printf("Pressione (1) para continuar:\n");
 
-scanf("%d",&opcao);  // VerificaÁ„o do usu·rio
+scanf("%d",&opcao);  // Verifica√ß√£o do usu√°rio
 
 
 }
 
-while(opcao == 1); // Se o usu·rio disser "s" o loop continua e seu programa volta a ser executado de novo
+while(opcao == 1); // Se o usu√°rio disser "s" o loop continua e seu programa volta a ser executado de novo
 
 system ("pause");
 
